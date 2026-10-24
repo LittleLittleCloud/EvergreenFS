@@ -118,7 +118,6 @@ jobs:
       github.ref == 'refs/heads/main' &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
-    environment: nuget
     permissions:
       contents: read
       id-token: write
@@ -136,7 +135,7 @@ jobs:
         shell: bash
         run: |
           if [ -z "$NUGET_USER" ]; then
-            echo "::error::Set the GitHub Actions repository or nuget environment Secret NUGET_USER to your NuGet profile username (not an API key or email). Configure the ci-release.yml / nuget trusted publisher. See docs/packaging.md."
+            echo "::error::Set the GitHub Actions repository Secret NUGET_USER to your NuGet profile username (not an API key or email). Configure the ci-release.yml trusted publisher with Environment left blank. See docs/packaging.md."
             exit 1
           fi
       - name: NuGet login using OIDC

@@ -114,9 +114,9 @@ artifacts.
 Use [NuGet Trusted Publishing](https://learn.microsoft.com/en-us/nuget/nuget-org/trusted-publishing)
 and [NuGet/login v1](https://github.com/NuGet/login).
 
-Create a public `LittleLittleCloud/EvergreenFS` repository and a GitHub environment
-named **`nuget`**. Restrict it to main, but **do not configure required reviewers
-or wait timers**: every main push must publish automatically.
+Use the public `LittleLittleCloud/EvergreenFS` repository. No GitHub environment
+is required: the publish job has no environment, and its existing repository,
+main-branch and event gates control publication.
 
 In NuGet.org, sign in with the account that will own these packages, then create
 a GitHub Trusted Publishing policy with this exact tuple:
@@ -126,7 +126,7 @@ a GitHub Trusted Publishing policy with this exact tuple:
 | Repository owner | `LittleLittleCloud` |
 | Repository | `EvergreenFS` |
 | Workflow file (filename only) | `ci-release.yml` |
-| Environment | `nuget` |
+| Environment | Leave blank |
 | Package patterns | `EvergreenFS` and `EvergreenFS.Build` |
 | Scopes | Allow new packages and new versions (both IDs are initially unpublished) |
 
@@ -135,9 +135,10 @@ for both. Choose the correct NuGet policy/package owner and ensure the publishin
 account has ownership/permissions. Verify IDs are available; this implementation
 does not reserve them.
 
-Configure a GitHub Actions repository or `nuget` environment **Secret**
+Configure a GitHub Actions repository **Secret**
 `NUGET_USER` containing the NuGet **profile username**, not an API key or email.
-Both the setup check and NuGet login read this Secret only. The workflow fails
+An environment Secret is not available to this job. Both the setup check and
+NuGet login read the repository Secret only. The workflow fails
 with an actionable error when it is absent; authentication failures remain
 failures. It does not use a
 permanent API-key fallback. Only the publish job has `id-token: write`; default

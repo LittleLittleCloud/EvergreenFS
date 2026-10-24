@@ -26,9 +26,9 @@ application DLL and intended application dependency closure; no manual imports
 or repository paths are needed. [Installation, local pack/smoke reproduction,
 CI jobs and automatic main-push NuGet setup](docs/packaging.md).
 
-For trusted publishing, configure a GitHub Actions repository or `nuget`
-environment Secret named `NUGET_USER` containing the NuGet profile username,
-not an API key or email.
+For trusted publishing, configure a GitHub Actions repository Secret named
+`NUGET_USER` containing the NuGet profile username, not an API key or email.
+Leave the NuGet policy's Environment field blank; no GitHub environment is required.
 
 ## Build and actually run compatibility
 
