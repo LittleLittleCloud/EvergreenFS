@@ -132,18 +132,18 @@ jobs:
           path: packages
       - name: Require NuGet trusted publishing setup
         env:
-          NUGET_USER: ${{ vars.NUGET_USER }}
+          NUGET_USER: ${{ secrets.NUGET_USER }}
         shell: bash
         run: |
           if [ -z "$NUGET_USER" ]; then
-            echo "::error::Set the GitHub NUGET_USER variable to your NuGet profile username (not email), and configure the ci-release.yml / nuget trusted publisher. See docs/packaging.md."
+            echo "::error::Set the GitHub Actions repository or nuget environment Secret NUGET_USER to your NuGet profile username (not an API key or email). Configure the ci-release.yml / nuget trusted publisher. See docs/packaging.md."
             exit 1
           fi
       - name: NuGet login using OIDC
         id: login
         uses: NuGet/login@ebc737b6fc418a6ca0073cf116ec8dc156d8b81e # v1
         with:
-          user: ${{ vars.NUGET_USER }}
+          user: ${{ secrets.NUGET_USER }}
       - name: Publish runtime then matching build integration
         env:
           NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}

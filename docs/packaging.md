@@ -135,9 +135,11 @@ for both. Choose the correct NuGet policy/package owner and ensure the publishin
 account has ownership/permissions. Verify IDs are available; this implementation
 does not reserve them.
 
-Set repository or `nuget` environment **variable** `NUGET_USER` to the NuGet
-**profile username**, not email. The workflow fails with an actionable error
-when it is absent; authentication failures remain failures. It does not use a
+Configure a GitHub Actions repository or `nuget` environment **Secret**
+`NUGET_USER` containing the NuGet **profile username**, not an API key or email.
+Both the setup check and NuGet login read this Secret only. The workflow fails
+with an actionable error when it is absent; authentication failures remain
+failures. It does not use a
 permanent API-key fallback. Only the publish job has `id-token: write`; default
 permissions are `contents: read`. Action revisions are pinned to verified tag
 SHAs. The temporary key is used from `steps.login.outputs.NUGET_API_KEY` without

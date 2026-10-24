@@ -26,6 +26,10 @@ application DLL and intended application dependency closure; no manual imports
 or repository paths are needed. [Installation, local pack/smoke reproduction,
 CI jobs and automatic main-push NuGet setup](docs/packaging.md).
 
+For trusted publishing, configure a GitHub Actions repository or `nuget`
+environment Secret named `NUGET_USER` containing the NuGet profile username,
+not an API key or email.
+
 ## Build and actually run compatibility
 
 Requires SDK **10.0.100**, Python 3, and NuGet access on the first restore.
