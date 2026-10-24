@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+artifacts/*
+*.nupkg
+*.snupkg
+*.trx
+*.log
+.DS_Store
+.env
+.env.*
+**/*prompt*.md
+**/*handoff*.md
+*.db
+*.db-shm
+*.db-wal

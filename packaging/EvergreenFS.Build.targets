@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <_EvergreenRewriter>$(MSBuildThisFileDirectory)../tools/net10.0/EvergreenFS.Rewriter.dll</_EvergreenRewriter>
+  </PropertyGroup>
+  <!-- Always visit the output: copied dependency DLLs can change even when the main DLL does not. -->
+  <Target Name="EvergreenRewritePackagedOutput" AfterTargets="Build"
+          Condition="'$(DesignTimeBuild)' != 'true' and '$(IsCrossTargetingBuild)' != 'true' and Exists('$(TargetPath)')">
+    <Exec Command="dotnet &quot;$(_EvergreenRewriter)&quot; &quot;$(TargetPath)&quot; --closure" />
+  </Target>
+</Project>

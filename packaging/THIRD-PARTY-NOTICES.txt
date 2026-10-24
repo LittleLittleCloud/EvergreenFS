@@ -1,0 +1,28 @@
+EvergreenFS third-party notices
+
+EvergreenFS is MIT licensed, Copyright (c) 2026 Xiaoyun Zhang.
+
+EvergreenFS.Build bundles unmodified dependency binaries from portable dotnet
+publish. EvergreenFS resolves its SQLite dependencies through NuGet:
+
+Mono.Cecil 0.11.6 (build tool only): MIT, Jb Evain / Novell.
+https://github.com/jbevain/cecil/tree/0.11.6
+Full notice: licenses/Mono.Cecil-MIT.txt
+
+Microsoft.Data.Sqlite / Microsoft.Data.Sqlite.Core 10.0.0: MIT,
+Copyright (c) .NET Foundation and Contributors.
+https://github.com/dotnet/efcore/tree/v10.0.0
+Full notice: licenses/dotnet-MIT.txt
+
+SQLitePCLRaw core/provider/config/bundle 3.0.5: Apache-2.0,
+Copyright 2014-2025 SourceGear, LLC.
+https://github.com/ericsink/SQLitePCL.raw/tree/ed046114d5a30534e13294d94d78eb73de896ad4
+Full license: licenses/Apache-2.0.txt
+
+SQLite 3.53.4 native binaries: public domain.
+https://sqlite.org/copyright.html
+
+The repository also vendors unchanged dotnet/runtime test sources under MIT,
+Copyright (c) .NET Foundation and Contributors. Their original license remains
+at tests/RuntimeCompatibility/Upstream/LICENSE.TXT; tests are not packaged.
+The full MIT notice is also included as licenses/dotnet-MIT.txt.

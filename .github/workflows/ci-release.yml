@@ -1,0 +1,154 @@
+name: Build Test Publish
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Main runs have unique groups: neither active nor pending pushes are discarded.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.ref || github.run_id }}-${{ github.run_attempt }}
+  cancel-in-progress: false
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+  DOTNET_NOLOGO: '1'
+  PACKAGE_VERSION: 0.1.0-ci.${{ github.run_number }}.${{ github.run_attempt }}
+
+jobs:
+  test:
+    name: Regression and upstream compatibility (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: 10.0.100
+      - name: Locked restore, build, regression, samples and compatibility
+        shell: bash
+        run: |
+          mkdir -p artifacts
+          bash scripts/verify.sh 2>&1 | tee artifacts/verify.log
+      - name: Preserve results and provider evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: test-results-${{ matrix.os }}
+          if-no-files-found: warn
+          path: |
+            artifacts/verify.log
+            artifacts/test-results/*.trx
+            artifacts/compatibility/*.trx
+            artifacts/compatibility/*-evidence.jsonl
+            artifacts/compatibility/summary.json
+            artifacts/compatibility/api-inventory.json
+
+  pack:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: 10.0.100
+      - name: Pack and inspect portable release artifacts
+        shell: bash
+        run: |
+          mkdir -p artifacts
+          bash scripts/pack.sh "$PACKAGE_VERSION" 2>&1 | tee artifacts/pack.log
+      - name: Preserve packages independently of publication authentication
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: nuget-packages
+          if-no-files-found: error
+          path: artifacts/nuget/${{ env.PACKAGE_VERSION }}/*.nupkg
+      - name: Preserve pack log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pack-log
+          if-no-files-found: warn
+          path: artifacts/pack.log
+
+  package-smoke:
+    needs: pack
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: 10.0.100
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: nuget-packages
+          path: artifacts/downloaded-packages
+      - name: Install and consume the exact publish artifacts in isolation
+        shell: bash
+        run: bash scripts/package-smoke.sh "$PACKAGE_VERSION" artifacts/downloaded-packages 2>&1 | tee artifacts/package-smoke.log
+      - name: Preserve package consumer log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: package-smoke-${{ matrix.os }}
+          if-no-files-found: warn
+          path: artifacts/package-smoke.log
+
+  publish:
+    needs: [pack, package-smoke]
+    if: >-
+      github.repository == 'LittleLittleCloud/EvergreenFS' &&
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    environment: nuget
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: 10.0.100
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: nuget-packages
+          path: packages
+      - name: Require NuGet trusted publishing setup
+        env:
+          NUGET_USER: ${{ vars.NUGET_USER }}
+        shell: bash
+        run: |
+          if [ -z "$NUGET_USER" ]; then
+            echo "::error::Set the GitHub NUGET_USER variable to your NuGet profile username (not email), and configure the ci-release.yml / nuget trusted publisher. See docs/packaging.md."
+            exit 1
+          fi
+      - name: NuGet login using OIDC
+        id: login
+        uses: NuGet/login@ebc737b6fc418a6ca0073cf116ec8dc156d8b81e # v1
+        with:
+          user: ${{ vars.NUGET_USER }}
+      - name: Publish runtime then matching build integration
+        env:
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        shell: bash
+        run: |
+          test -n "$NUGET_API_KEY" || { echo "::error::NuGet login returned no temporary API key."; exit 1; }
+          dotnet nuget push "packages/EvergreenFS.$PACKAGE_VERSION.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          dotnet nuget push "packages/EvergreenFS.Build.$PACKAGE_VERSION.nupkg" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate

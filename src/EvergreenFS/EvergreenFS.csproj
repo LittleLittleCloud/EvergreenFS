@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <Description>Versioned virtual filesystems with InMemory, SQLite and Original providers, and managed System.IO facades for .NET 10.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../packaging/README.md" Pack="true" PackagePath="/" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="/" />
+    <None Include="../../packaging/THIRD-PARTY-NOTICES.txt" Pack="true" PackagePath="/" />
+    <None Include="../../packaging/licenses/*" Pack="true" PackagePath="licenses/" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.0" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.5" />
+  </ItemGroup>
+</Project>

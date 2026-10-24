@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>EvergreenFS.Build</id>
+    <version>$version$</version>
+    <authors>LittleLittleCloud / Xiaoyun Zhang</authors>
+    <description>Build-time managed System.IO interception for .NET 10 applications and their application dependency closure. Includes a portable Mono.Cecil rewriter.</description>
+    <copyright>Copyright (c) 2026 Xiaoyun Zhang</copyright>
+    <license type="expression">MIT</license>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/LittleLittleCloud/EvergreenFS</projectUrl>
+    <repository type="git" url="https://github.com/LittleLittleCloud/EvergreenFS" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="EvergreenFS" version="[$version$]" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="$tools$**/*" target="tools/net10.0" exclude="$tools$**/*.pdb" />
+    <file src="../../packaging/EvergreenFS.Build.targets" target="build" />
+    <file src="../../packaging/README.md" target="README.md" />
+    <file src="../../LICENSE" target="LICENSE" />
+    <file src="../../packaging/THIRD-PARTY-NOTICES.txt" target="THIRD-PARTY-NOTICES.txt" />
+    <file src="../../packaging/licenses/*" target="licenses" />
+  </files>
+</package>

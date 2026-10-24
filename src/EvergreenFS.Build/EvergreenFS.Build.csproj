@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NuspecFile>EvergreenFS.Build.nuspec</NuspecFile>
+    <ToolPublishDir>$(MSBuildProjectDirectory)/obj/$(Configuration)/rewriter/</ToolPublishDir>
+    <NuspecProperties>version=$(Version);tools=$(ToolPublishDir)</NuspecProperties>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+  <Target Name="PublishPackagedRewriter" BeforeTargets="GenerateNuspec">
+    <RemoveDir Directories="$(ToolPublishDir)" />
+    <Exec Command="dotnet publish &quot;$(MSBuildProjectDirectory)/../EvergreenFS.Rewriter/EvergreenFS.Rewriter.csproj&quot; --no-restore --configuration $(Configuration) --no-self-contained -p:UseAppHost=false -p:Version=$(Version) --output &quot;$(ToolPublishDir)&quot;" />
+  </Target>
+</Project>

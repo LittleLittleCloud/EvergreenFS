@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>EvergreenSmoke.Dependency</PackageId>
+    <Version>$(SmokeVersion)</Version>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../ManagedDependency/ManagedDependency.csproj" />
+    <ProjectReference Include="../../src/EvergreenFS/EvergreenFS.csproj" />
+    <ProjectReference Include="../../src/EvergreenFS.Rewriter/EvergreenFS.Rewriter.csproj" ReferenceOutputAssembly="false" />
+  </ItemGroup>
+  <Import Project="../../build/EvergreenFS.targets" />
+</Project>

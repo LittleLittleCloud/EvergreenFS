@@ -1,0 +1,2116 @@
+[
+  {
+    "type": "System.IO.File",
+    "replacement": "EvergreenFS.FileFacade",
+    "members": [
+      {
+        "signature": "Microsoft.Win32.SafeHandles.SafeFileHandle System.IO.File::OpenHandle(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.IO.FileOptions,System.Int64)",
+        "supported": false
+      },
+      {
+        "signature": "System.Boolean System.IO.File::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.File::Exists(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Byte[] System.IO.File::ReadAllBytes(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IAsyncEnumerable\u00601\u003CSystem.String\u003E System.IO.File::ReadLinesAsync(System.String,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": false
+      },
+      {
+        "signature": "System.Collections.Generic.IAsyncEnumerable\u00601\u003CSystem.String\u003E System.IO.File::ReadLinesAsync(System.String,System.Threading.CancellationToken)",
+        "supported": false
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.File::ReadLines(System.String,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.File::ReadLines(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetCreationTime(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetCreationTime(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetCreationTimeUtc(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetCreationTimeUtc(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastAccessTime(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastAccessTime(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastAccessTimeUtc(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastAccessTimeUtc(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastWriteTime(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastWriteTime(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastWriteTimeUtc(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.File::GetLastWriteTimeUtc(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Int32 System.IO.File::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileAttributes System.IO.File::GetAttributes(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.FileAttributes System.IO.File::GetAttributes(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Create(System.String,System.Int32,System.IO.FileOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Create(System.String,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Create(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Open(System.String,System.IO.FileMode,System.IO.FileAccess)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Open(System.String,System.IO.FileMode)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::Open(System.String,System.IO.FileStreamOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::OpenRead(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.File::OpenWrite(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.File::CreateSymbolicLink(System.String,System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.File::ResolveLinkTarget(System.String,System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.StreamReader System.IO.File::OpenText(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.StreamWriter System.IO.File::AppendText(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.StreamWriter System.IO.File::CreateText(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.UnixFileMode System.IO.File::GetUnixFileMode(Microsoft.Win32.SafeHandles.SafeFileHandle)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.UnixFileMode System.IO.File::GetUnixFileMode(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.File::ReadAllText(System.String,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.File::ReadAllText(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.File::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.File::ReadAllLines(System.String,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.File::ReadAllLines(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllBytesAsync(System.String,System.Byte[],System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllBytesAsync(System.String,System.ReadOnlyMemory\u00601\u003CSystem.Byte\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllLinesAsync(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllLinesAsync(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllTextAsync(System.String,System.ReadOnlyMemory\u00601\u003CSystem.Char\u003E,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllTextAsync(System.String,System.ReadOnlyMemory\u00601\u003CSystem.Char\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllTextAsync(System.String,System.String,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::AppendAllTextAsync(System.String,System.String,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllBytesAsync(System.String,System.Byte[],System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllBytesAsync(System.String,System.ReadOnlyMemory\u00601\u003CSystem.Byte\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllLinesAsync(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllLinesAsync(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllTextAsync(System.String,System.ReadOnlyMemory\u00601\u003CSystem.Char\u003E,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllTextAsync(System.String,System.ReadOnlyMemory\u00601\u003CSystem.Char\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllTextAsync(System.String,System.String,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.File::WriteAllTextAsync(System.String,System.String,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.Byte[]\u003E System.IO.File::ReadAllBytesAsync(System.String,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String[]\u003E System.IO.File::ReadAllLinesAsync(System.String,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String[]\u003E System.IO.File::ReadAllLinesAsync(System.String,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String\u003E System.IO.File::ReadAllTextAsync(System.String,System.Text.Encoding,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String\u003E System.IO.File::ReadAllTextAsync(System.String,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.File::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllBytes(System.String,System.Byte[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllBytes(System.String,System.ReadOnlySpan\u00601\u003CSystem.Byte\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllLines(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllLines(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllText(System.String,System.ReadOnlySpan\u00601\u003CSystem.Char\u003E,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllText(System.String,System.ReadOnlySpan\u00601\u003CSystem.Char\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllText(System.String,System.String,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::AppendAllText(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Copy(System.String,System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Copy(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Decrypt(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::Delete(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Encrypt(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::Move(System.String,System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Move(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Replace(System.String,System.String,System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::Replace(System.String,System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::SetAttributes(Microsoft.Win32.SafeHandles.SafeFileHandle,System.IO.FileAttributes)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetAttributes(System.String,System.IO.FileAttributes)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::SetCreationTime(Microsoft.Win32.SafeHandles.SafeFileHandle,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetCreationTime(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetCreationTimeUtc(Microsoft.Win32.SafeHandles.SafeFileHandle,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetCreationTimeUtc(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastAccessTime(Microsoft.Win32.SafeHandles.SafeFileHandle,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastAccessTime(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastAccessTimeUtc(Microsoft.Win32.SafeHandles.SafeFileHandle,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastAccessTimeUtc(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastWriteTime(Microsoft.Win32.SafeHandles.SafeFileHandle,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastWriteTime(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastWriteTimeUtc(Microsoft.Win32.SafeHandles.SafeFileHandle,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetLastWriteTimeUtc(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetUnixFileMode(Microsoft.Win32.SafeHandles.SafeFileHandle,System.IO.UnixFileMode)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::SetUnixFileMode(System.String,System.IO.UnixFileMode)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllBytes(System.String,System.Byte[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllBytes(System.String,System.ReadOnlySpan\u00601\u003CSystem.Byte\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllLines(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllLines(System.String,System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllLines(System.String,System.String[],System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllLines(System.String,System.String[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllText(System.String,System.ReadOnlySpan\u00601\u003CSystem.Char\u003E,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllText(System.String,System.ReadOnlySpan\u00601\u003CSystem.Char\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllText(System.String,System.String,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.File::WriteAllText(System.String,System.String)",
+        "supported": true
+      }
+    ],
+    "fields": []
+  },
+  {
+    "type": "System.IO.Directory",
+    "replacement": "EvergreenFS.DirectoryFacade",
+    "members": [
+      {
+        "signature": "System.Boolean System.IO.Directory::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.Directory::Exists(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateDirectories(System.String,System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateDirectories(System.String,System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateDirectories(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateDirectories(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFiles(System.String,System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFiles(System.String,System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFiles(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFiles(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFileSystemEntries(System.String,System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFileSystemEntries(System.String,System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFileSystemEntries(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.String\u003E System.IO.Directory::EnumerateFileSystemEntries(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.DateTime System.IO.Directory::GetCreationTime(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.Directory::GetCreationTimeUtc(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.Directory::GetLastAccessTime(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.Directory::GetLastAccessTimeUtc(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.Directory::GetLastWriteTime(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.Directory::GetLastWriteTimeUtc(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Int32 System.IO.Directory::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.Directory::CreateDirectory(System.String,System.IO.UnixFileMode)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.Directory::CreateDirectory(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.Directory::CreateTempSubdirectory(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.Directory::GetParent(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.Directory::CreateSymbolicLink(System.String,System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.Directory::ResolveLinkTarget(System.String,System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.Directory::GetCurrentDirectory()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.Directory::GetDirectoryRoot(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.Directory::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetDirectories(System.String,System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetDirectories(System.String,System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetDirectories(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetDirectories(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFiles(System.String,System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFiles(System.String,System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFiles(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFiles(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFileSystemEntries(System.String,System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFileSystemEntries(System.String,System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFileSystemEntries(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetFileSystemEntries(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.String[] System.IO.Directory::GetLogicalDrives()",
+        "supported": false
+      },
+      {
+        "signature": "System.Type System.IO.Directory::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.Directory::Delete(System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.Directory::Delete(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.Directory::Move(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetCreationTime(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetCreationTimeUtc(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetCurrentDirectory(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetLastAccessTime(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetLastAccessTimeUtc(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetLastWriteTime(System.String,System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.Directory::SetLastWriteTimeUtc(System.String,System.DateTime)",
+        "supported": false
+      }
+    ],
+    "fields": []
+  },
+  {
+    "type": "System.IO.FileStream",
+    "replacement": "EvergreenFS.ManagedFileStream",
+    "members": [
+      {
+        "signature": "Microsoft.Win32.SafeHandles.SafeFileHandle System.IO.FileStream::get_SafeFileHandle()",
+        "supported": false
+      },
+      {
+        "signature": "System.Boolean System.IO.FileStream::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileStream::get_CanRead()",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileStream::get_CanSeek()",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileStream::get_CanTimeout()",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileStream::get_CanWrite()",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileStream::get_IsAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.IAsyncResult System.IO.FileStream::BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.IAsyncResult System.IO.FileStream::BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::EndRead(System.IAsyncResult)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::get_ReadTimeout()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::get_WriteTimeout()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::Read(System.Byte[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::Read(System.Span\u00601\u003CSystem.Byte\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::ReadAtLeast(System.Span\u00601\u003CSystem.Byte\u003E,System.Int32,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.FileStream::ReadByte()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int64 System.IO.FileStream::get_Length()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int64 System.IO.FileStream::get_Position()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int64 System.IO.FileStream::Seek(System.Int64,System.IO.SeekOrigin)",
+        "supported": true
+      },
+      {
+        "signature": "System.IntPtr System.IO.FileStream::get_Handle()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.FileStream::GetLifetimeService()",
+        "supported": true
+      },
+      {
+        "signature": "System.Object System.IO.FileStream::InitializeLifetimeService()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileStream::get_Name()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileStream::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::CopyToAsync(System.IO.Stream,System.Int32,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::CopyToAsync(System.IO.Stream,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::CopyToAsync(System.IO.Stream,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::CopyToAsync(System.IO.Stream)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::FlushAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::FlushAsync(System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.FileStream::WriteAsync(System.Byte[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.Int32\u003E System.IO.FileStream::ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.Int32\u003E System.IO.FileStream::ReadAsync(System.Byte[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask System.IO.FileStream::DisposeAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask System.IO.FileStream::ReadExactlyAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask System.IO.FileStream::ReadExactlyAsync(System.Memory\u00601\u003CSystem.Byte\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask System.IO.FileStream::WriteAsync(System.ReadOnlyMemory\u00601\u003CSystem.Byte\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask\u00601\u003CSystem.Int32\u003E System.IO.FileStream::ReadAsync(System.Memory\u00601\u003CSystem.Byte\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask\u00601\u003CSystem.Int32\u003E System.IO.FileStream::ReadAtLeastAsync(System.Memory\u00601\u003CSystem.Byte\u003E,System.Int32,System.Boolean,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.FileStream::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(Microsoft.Win32.SafeHandles.SafeFileHandle,System.IO.FileAccess,System.Int32,System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(Microsoft.Win32.SafeHandles.SafeFileHandle,System.IO.FileAccess,System.Int32)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(Microsoft.Win32.SafeHandles.SafeFileHandle,System.IO.FileAccess)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.IntPtr,System.IO.FileAccess,System.Boolean,System.Int32,System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.IntPtr,System.IO.FileAccess,System.Boolean,System.Int32)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.IntPtr,System.IO.FileAccess,System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.IntPtr,System.IO.FileAccess)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.IO.FileOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode,System.IO.FileAccess)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileMode)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::.ctor(System.String,System.IO.FileStreamOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Close()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::CopyTo(System.IO.Stream,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::CopyTo(System.IO.Stream)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Dispose()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::EndWrite(System.IAsyncResult)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Flush()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Flush(System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Lock(System.Int64,System.Int64)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::ReadExactly(System.Byte[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::ReadExactly(System.Span\u00601\u003CSystem.Byte\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::set_Position(System.Int64)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::set_ReadTimeout(System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::set_WriteTimeout(System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::SetLength(System.Int64)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Unlock(System.Int64,System.Int64)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Write(System.Byte[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::Write(System.ReadOnlySpan\u00601\u003CSystem.Byte\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileStream::WriteByte(System.Byte)",
+        "supported": true
+      }
+    ],
+    "fields": []
+  },
+  {
+    "type": "System.IO.FileInfo",
+    "replacement": "EvergreenFS.ManagedFileInfo",
+    "members": [
+      {
+        "signature": "System.Boolean System.IO.FileInfo::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileInfo::get_Exists()",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileInfo::get_IsReadOnly()",
+        "supported": true
+      },
+      {
+        "signature": "System.DateTime System.IO.FileInfo::get_CreationTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileInfo::get_CreationTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileInfo::get_LastAccessTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileInfo::get_LastAccessTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileInfo::get_LastWriteTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileInfo::get_LastWriteTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.Int32 System.IO.FileInfo::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int64 System.IO.FileInfo::get_Length()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.FileInfo::get_Directory()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileAttributes System.IO.FileInfo::get_Attributes()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo System.IO.FileInfo::CopyTo(System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo System.IO.FileInfo::CopyTo(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo System.IO.FileInfo::Replace(System.String,System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo System.IO.FileInfo::Replace(System.String,System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::Create()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::Open(System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::Open(System.IO.FileMode,System.IO.FileAccess)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::Open(System.IO.FileMode)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::Open(System.IO.FileStreamOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::OpenRead()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileStream System.IO.FileInfo::OpenWrite()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.FileInfo::ResolveLinkTarget(System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.StreamReader System.IO.FileInfo::OpenText()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.StreamWriter System.IO.FileInfo::AppendText()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.StreamWriter System.IO.FileInfo::CreateText()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.UnixFileMode System.IO.FileInfo::get_UnixFileMode()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.FileInfo::GetLifetimeService()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.FileInfo::InitializeLifetimeService()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.FileInfo::get_DirectoryName()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileInfo::get_Extension()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileInfo::get_FullName()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileInfo::get_LinkTarget()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.FileInfo::get_Name()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileInfo::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.FileInfo::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::.ctor(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::CreateAsSymbolicLink(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::Decrypt()",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::Delete()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::Encrypt()",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::MoveTo(System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::MoveTo(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::Refresh()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_Attributes(System.IO.FileAttributes)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_CreationTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_CreationTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_IsReadOnly(System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_LastAccessTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_LastAccessTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_LastWriteTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_LastWriteTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileInfo::set_UnixFileMode(System.IO.UnixFileMode)",
+        "supported": false
+      }
+    ],
+    "fields": []
+  },
+  {
+    "type": "System.IO.DirectoryInfo",
+    "replacement": "EvergreenFS.ManagedDirectoryInfo",
+    "members": [
+      {
+        "signature": "System.Boolean System.IO.DirectoryInfo::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.DirectoryInfo::get_Exists()",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.DirectoryInfo\u003E System.IO.DirectoryInfo::EnumerateDirectories()",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.DirectoryInfo\u003E System.IO.DirectoryInfo::EnumerateDirectories(System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.DirectoryInfo\u003E System.IO.DirectoryInfo::EnumerateDirectories(System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.DirectoryInfo\u003E System.IO.DirectoryInfo::EnumerateDirectories(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileInfo\u003E System.IO.DirectoryInfo::EnumerateFiles()",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileInfo\u003E System.IO.DirectoryInfo::EnumerateFiles(System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileInfo\u003E System.IO.DirectoryInfo::EnumerateFiles(System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileInfo\u003E System.IO.DirectoryInfo::EnumerateFiles(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileSystemInfo\u003E System.IO.DirectoryInfo::EnumerateFileSystemInfos()",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileSystemInfo\u003E System.IO.DirectoryInfo::EnumerateFileSystemInfos(System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileSystemInfo\u003E System.IO.DirectoryInfo::EnumerateFileSystemInfos(System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.Collections.Generic.IEnumerable\u00601\u003CSystem.IO.FileSystemInfo\u003E System.IO.DirectoryInfo::EnumerateFileSystemInfos(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.DateTime System.IO.DirectoryInfo::get_CreationTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.DirectoryInfo::get_CreationTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.DirectoryInfo::get_LastAccessTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.DirectoryInfo::get_LastAccessTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.DirectoryInfo::get_LastWriteTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.DirectoryInfo::get_LastWriteTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.Int32 System.IO.DirectoryInfo::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.DirectoryInfo::CreateSubdirectory(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.DirectoryInfo::get_Parent()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo System.IO.DirectoryInfo::get_Root()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo[] System.IO.DirectoryInfo::GetDirectories()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo[] System.IO.DirectoryInfo::GetDirectories(System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo[] System.IO.DirectoryInfo::GetDirectories(System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.DirectoryInfo[] System.IO.DirectoryInfo::GetDirectories(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileAttributes System.IO.DirectoryInfo::get_Attributes()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo[] System.IO.DirectoryInfo::GetFiles()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo[] System.IO.DirectoryInfo::GetFiles(System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo[] System.IO.DirectoryInfo::GetFiles(System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileInfo[] System.IO.DirectoryInfo::GetFiles(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.DirectoryInfo::ResolveLinkTarget(System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.FileSystemInfo[] System.IO.DirectoryInfo::GetFileSystemInfos()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo[] System.IO.DirectoryInfo::GetFileSystemInfos(System.String,System.IO.EnumerationOptions)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo[] System.IO.DirectoryInfo::GetFileSystemInfos(System.String,System.IO.SearchOption)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo[] System.IO.DirectoryInfo::GetFileSystemInfos(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.UnixFileMode System.IO.DirectoryInfo::get_UnixFileMode()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.DirectoryInfo::GetLifetimeService()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.DirectoryInfo::InitializeLifetimeService()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.DirectoryInfo::get_Extension()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.DirectoryInfo::get_FullName()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.DirectoryInfo::get_LinkTarget()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.DirectoryInfo::get_Name()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.DirectoryInfo::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.DirectoryInfo::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::.ctor(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::Create()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::CreateAsSymbolicLink(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::Delete()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::Delete(System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::MoveTo(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::Refresh()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_Attributes(System.IO.FileAttributes)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_CreationTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_CreationTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_LastAccessTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_LastAccessTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_LastWriteTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_LastWriteTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.DirectoryInfo::set_UnixFileMode(System.IO.UnixFileMode)",
+        "supported": false
+      }
+    ],
+    "fields": []
+  },
+  {
+    "type": "System.IO.FileSystemInfo",
+    "replacement": "EvergreenFS.ManagedFileSystemInfo",
+    "members": [
+      {
+        "signature": "System.Boolean System.IO.FileSystemInfo::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.FileSystemInfo::get_Exists()",
+        "supported": true
+      },
+      {
+        "signature": "System.DateTime System.IO.FileSystemInfo::get_CreationTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileSystemInfo::get_CreationTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileSystemInfo::get_LastAccessTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileSystemInfo::get_LastAccessTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileSystemInfo::get_LastWriteTime()",
+        "supported": false
+      },
+      {
+        "signature": "System.DateTime System.IO.FileSystemInfo::get_LastWriteTimeUtc()",
+        "supported": false
+      },
+      {
+        "signature": "System.Int32 System.IO.FileSystemInfo::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileAttributes System.IO.FileSystemInfo::get_Attributes()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.FileSystemInfo System.IO.FileSystemInfo::ResolveLinkTarget(System.Boolean)",
+        "supported": false
+      },
+      {
+        "signature": "System.IO.UnixFileMode System.IO.FileSystemInfo::get_UnixFileMode()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.FileSystemInfo::GetLifetimeService()",
+        "supported": false
+      },
+      {
+        "signature": "System.Object System.IO.FileSystemInfo::InitializeLifetimeService()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.FileSystemInfo::get_Extension()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileSystemInfo::get_FullName()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileSystemInfo::get_LinkTarget()",
+        "supported": false
+      },
+      {
+        "signature": "System.String System.IO.FileSystemInfo::get_Name()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.FileSystemInfo::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.FileSystemInfo::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::CreateAsSymbolicLink(System.String)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::Delete()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::Refresh()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_Attributes(System.IO.FileAttributes)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_CreationTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_CreationTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_LastAccessTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_LastAccessTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_LastWriteTime(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_LastWriteTimeUtc(System.DateTime)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.FileSystemInfo::set_UnixFileMode(System.IO.UnixFileMode)",
+        "supported": false
+      }
+    ],
+    "fields": []
+  },
+  {
+    "type": "System.IO.StreamReader",
+    "replacement": "EvergreenFS.ManagedStreamReader",
+    "members": [
+      {
+        "signature": "System.Boolean System.IO.StreamReader::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.StreamReader::get_EndOfStream()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::Peek()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::Read()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::Read(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::Read(System.Span\u00601\u003CSystem.Char\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::ReadBlock(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamReader::ReadBlock(System.Span\u00601\u003CSystem.Char\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.Stream System.IO.StreamReader::get_BaseStream()",
+        "supported": true
+      },
+      {
+        "signature": "System.Object System.IO.StreamReader::GetLifetimeService()",
+        "supported": true
+      },
+      {
+        "signature": "System.Object System.IO.StreamReader::InitializeLifetimeService()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.StreamReader::ReadLine()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.StreamReader::ReadToEnd()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.StreamReader::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.Text.Encoding System.IO.StreamReader::get_CurrentEncoding()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.Int32\u003E System.IO.StreamReader::ReadAsync(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.Int32\u003E System.IO.StreamReader::ReadBlockAsync(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String\u003E System.IO.StreamReader::ReadLineAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String\u003E System.IO.StreamReader::ReadToEndAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task\u00601\u003CSystem.String\u003E System.IO.StreamReader::ReadToEndAsync(System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask\u00601\u003CSystem.Int32\u003E System.IO.StreamReader::ReadAsync(System.Memory\u00601\u003CSystem.Char\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask\u00601\u003CSystem.Int32\u003E System.IO.StreamReader::ReadBlockAsync(System.Memory\u00601\u003CSystem.Char\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask\u00601\u003CSystem.String\u003E System.IO.StreamReader::ReadLineAsync(System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.StreamReader::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.IO.Stream,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.IO.Stream,System.Text.Encoding,System.Boolean,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.IO.Stream,System.Text.Encoding,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.IO.Stream,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.IO.Stream)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String,System.IO.FileStreamOptions)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String,System.Text.Encoding,System.Boolean,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String,System.Text.Encoding,System.Boolean,System.IO.FileStreamOptions)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String,System.Text.Encoding,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::.ctor(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::Close()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::DiscardBufferedData()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamReader::Dispose()",
+        "supported": true
+      }
+    ],
+    "fields": [
+      {
+        "signature": "System.IO.StreamReader Null",
+        "supported": false
+      }
+    ]
+  },
+  {
+    "type": "System.IO.StreamWriter",
+    "replacement": "EvergreenFS.ManagedStreamWriter",
+    "members": [
+      {
+        "signature": "System.Boolean System.IO.StreamWriter::Equals(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Boolean System.IO.StreamWriter::get_AutoFlush()",
+        "supported": true
+      },
+      {
+        "signature": "System.IFormatProvider System.IO.StreamWriter::get_FormatProvider()",
+        "supported": true
+      },
+      {
+        "signature": "System.Int32 System.IO.StreamWriter::GetHashCode()",
+        "supported": true
+      },
+      {
+        "signature": "System.IO.Stream System.IO.StreamWriter::get_BaseStream()",
+        "supported": true
+      },
+      {
+        "signature": "System.Object System.IO.StreamWriter::GetLifetimeService()",
+        "supported": true
+      },
+      {
+        "signature": "System.Object System.IO.StreamWriter::InitializeLifetimeService()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.StreamWriter::get_NewLine()",
+        "supported": true
+      },
+      {
+        "signature": "System.String System.IO.StreamWriter::ToString()",
+        "supported": true
+      },
+      {
+        "signature": "System.Text.Encoding System.IO.StreamWriter::get_Encoding()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::FlushAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::FlushAsync(System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteAsync(System.Char)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteAsync(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteAsync(System.Char[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteAsync(System.ReadOnlyMemory\u00601\u003CSystem.Char\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteAsync(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteAsync(System.Text.StringBuilder,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync(System.Char)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync(System.Char[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync(System.ReadOnlyMemory\u00601\u003CSystem.Char\u003E,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.Task System.IO.StreamWriter::WriteLineAsync(System.Text.StringBuilder,System.Threading.CancellationToken)",
+        "supported": true
+      },
+      {
+        "signature": "System.Threading.Tasks.ValueTask System.IO.StreamWriter::DisposeAsync()",
+        "supported": true
+      },
+      {
+        "signature": "System.Type System.IO.StreamWriter::GetType()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.IO.Stream,System.Text.Encoding,System.Int32,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.IO.Stream,System.Text.Encoding,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.IO.Stream,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.IO.Stream)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.String,System.Boolean,System.Text.Encoding,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.String,System.Boolean,System.Text.Encoding)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.String,System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.String,System.IO.FileStreamOptions)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.String,System.Text.Encoding,System.IO.FileStreamOptions)",
+        "supported": false
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::.ctor(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Close()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Dispose()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Flush()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::set_AutoFlush(System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::set_NewLine(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Char)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Char[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Decimal)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Double)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Int64)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.ReadOnlySpan\u00601\u003CSystem.Char\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Single)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.String,System.Object,System.Object,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.String,System.Object,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.String,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.String,System.Object[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.String,System.ReadOnlySpan\u00601\u003CSystem.Object\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.Text.StringBuilder)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.UInt32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::Write(System.UInt64)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine()",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Boolean)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Char)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Char[],System.Int32,System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Char[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Decimal)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Double)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Int32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Int64)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.ReadOnlySpan\u00601\u003CSystem.Char\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Single)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.String,System.Object,System.Object,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.String,System.Object,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.String,System.Object)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.String,System.Object[])",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.String,System.ReadOnlySpan\u00601\u003CSystem.Object\u003E)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.String)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.Text.StringBuilder)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.UInt32)",
+        "supported": true
+      },
+      {
+        "signature": "System.Void System.IO.StreamWriter::WriteLine(System.UInt64)",
+        "supported": true
+      }
+    ],
+    "fields": [
+      {
+        "signature": "System.IO.StreamWriter Null",
+        "supported": false
+      }
+    ]
+  }
+]

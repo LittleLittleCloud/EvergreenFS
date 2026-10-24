@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/dotnet/runtime",
+  "commit": "60629d14374c56f1cb51819049ad1fa529307f8d",
+  "license": "MIT",
+  "base": "src/libraries/System.Runtime/tests/System.IO.FileSystem.Tests/",
+  "files": [
+    {"local": "LICENSE.TXT", "path": "LICENSE.TXT", "root": true, "sha256": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310", "included": false, "reason": "Upstream license"},
+    {"local": "ReadWriteAllText.cs", "path": "File/ReadWriteAllText.cs", "sha256": "dded6a1c2dc5b406cb9e4dab7c4c1146d99b05bca236677f8de90f35ca94b58f", "included": true},
+    {"local": "ReadWriteAllTextAsync.cs", "path": "File/ReadWriteAllTextAsync.cs", "sha256": "b91a759ea3cf5662afa6d5c9480fc43e15a7e6bf5f542b0ab2087b37d03d35af", "included": true},
+    {"local": "ReadWriteAllLines.cs", "path": "File/ReadWriteAllLines.cs", "sha256": "84c0b7b42a46d4de1d9d07d1c0825ca8118c6b33260402be052ea1eba17f3181", "included": true},
+    {"local": "Append.cs", "path": "File/Append.cs", "sha256": "f1798ce57d609e28910d39b0cc615e492389668d7f2cc3ec274861decf3c9788", "included": true},
+    {"local": "AppendAllBytes.cs", "path": "File/AppendAllBytes.cs", "sha256": "3cd0d89b2481dc9a4fcf8dc84b81810adc396e28f4f8d82bf7becf22d2a3bd3e", "included": true},
+    {"local": "FileInfo_CreateText.cs", "path": "FileInfo/CreateText.cs", "sha256": "5a309f663e41cf7d666091f094e7fd5e33c1e27a77443d1d26e895cdf5d152ef", "included": true},
+    {"local": "FileInfo_AppendText.cs", "path": "FileInfo/AppendText.cs", "sha256": "d0cbce9b2d16636f0db89fd72cabd57bb4e1cd460d32178bf3553f0f3d1ead9a", "included": true},
+    {"local": "FileStream_FlushAsync.cs", "path": "FileStream/FlushAsync.cs", "sha256": "b267fad6ae2099dfc6eeccb56439b605bf0448960c32edfb00c712e4762e7def", "included": true},
+    {"local": "ReadWriteAllBytes.cs", "path": "File/ReadWriteAllBytes.cs", "sha256": "02c7b257d91417ff473e4893bcf70c32dbf0ea812dbca924cb26e1be818833d8", "included": false, "reason": "Entire file excluded: procfs, FIFO/mkfifo, named pipes and native device paths require host IO, not virtual ordinary files. Byte overloads exercised unchanged by AppendAllBytes.cs and text byte comparison cases."},
+    {"local": "FileStream_ReadWriteSpan.cs", "path": "FileStream/ReadWriteSpan.cs", "sha256": "83c2c2677e6662919e4b7480287436a4489e0584040f989b6b53cc499d9b8ceb", "included": false, "reason": "Entire file excluded: asserts derived FileStream array-dispatch implementation details. Inheriting intercepted IO types is explicitly rejected; local dependency tests cover spans and memory on ordinary streams."},
+    {"local": "FileStream_Position.cs", "path": "FileStream/Position.cs", "sha256": "a305d75bdef80d5f9aa78106f182c5c70dfcec9af629a2b0714dbeeb569fb90a", "included": false, "reason": "Entire file excluded: UnseekableFileStream subclass infrastructure requires unsupported FileStream inheritance. Local dependency tests cover ordinary seek/append origin."},
+    {"local": "FileInfo_Length.cs", "path": "FileInfo/Length.cs", "sha256": "6252c56694797a4c29808692fe79315faea9a35cd4edd71a90933a1d1e58f69e", "included": false, "reason": "Entire file excluded: symbolic link lengths, MountHelper/TempFile and platform-specific trailing path fixtures. Local tests cover ordinary length."},
+    {"local": "FileInfo_Directory.cs", "path": "FileInfo/Directory.cs", "sha256": "4bb9e19bdc507360130dab413c576fb98c4b029ac0b5b81d420feb8e1c8779b9", "included": false, "reason": "Entire file excluded: OS root, UNC and trailing-separator FileInfo semantics differ from explicit virtual mount normalization. Local tests cover virtual parent relationships."}
+  ]
+}

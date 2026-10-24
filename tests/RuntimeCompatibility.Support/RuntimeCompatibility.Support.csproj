@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><AssemblyName>EvergreenFS.CompatibilitySupport</AssemblyName></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/EvergreenFS/EvergreenFS.csproj" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+</Project>

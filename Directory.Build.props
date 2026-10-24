@@ -1,0 +1,21 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <IsPackable>false</IsPackable>
+    <Version Condition="'$(Version)' == ''">0.1.0</Version>
+    <Authors>LittleLittleCloud / Xiaoyun Zhang</Authors>
+    <Copyright>Copyright (c) 2026 Xiaoyun Zhang</Copyright>
+    <PackageProjectUrl>https://github.com/LittleLittleCloud/EvergreenFS</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/LittleLittleCloud/EvergreenFS</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <DebugType>embedded</DebugType>
+    <PathMap>$(MSBuildThisFileDirectory)=/_/</PathMap>
+  </PropertyGroup>
+</Project>
